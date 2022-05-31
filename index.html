@@ -1,58 +1,66 @@
 <html>
     <head>
+        <title>Idk</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-        <title>
-            Home
-        </title>
         <style>
             body {
                 height: 100%;
                 background-image: url("https://images.unsplash.com/photo-1527492662722-dbaf97270863?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8c3RhcnJ5JTIwc2t5fGVufDB8fDB8fA%3D%3D&w=1000&q=80");
-
-                /* Full height */
-                /* Center and scale the image nicely */
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: cover;
             }
-			.navbar{
-				opacity: 0.8;
-			}
+	/* Full-width inputs */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  background-color: gray;
+  color: black;
+  border-radius: 10px;
+  box-sizing: border-box;
+  opacity: 0.8;
+}
+
+input::placeholder{
+	color: white;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.btn:hover > button{
+		color: black;
+}
         </style>
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="background-color: black;">
-            <div class="collapse" id="collapsedStuff">
-                <a class="nav-link active" aria-current="page" href="/login">Login</a>
-                <a class="nav-link active" aria-current="page" href="/register">Register</a>
-            </div>
-
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Idk</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsedStuff" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/login">Login</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/register">Register</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
         <div class="mask" style="background-color: rgba(0, 0, 0, 0.8);">
-            <div class="container d-flex align-items-center justify-content-center text-center h-100">
-                <div class="text-white">
-                    <h1 class="mb-3">Welcome!</h1>
-                    <a class="btn btn-outline-light btn-lg m-2" href="/login" role="button" rel="nofollow">Login</a>
-                    <a class="btn btn-outline-light btn-lg m-2" href="/register" role="button">Register</a>
-                </div>
+            <div class="container h-100" style="padding-top: 55px;">
+                <form action="/app" method="POST" style="border-width: 0;">
+                    <b style="color: white;">Username:</b>
+                    <input type="text" placeholder="Enter Username" name="uname" required />
+                    <p></p>
+                    <b style="color: white;">Password:</b>
+                    <input type="password" placeholder="Enter Password" name="pass" required />
+                    <p></p>
+                    <div class="container d-flex align-items-center justify-content-center">
+                        <a role="button" class="btn btn-outline-light btn-lg"><button type="submit">Login</button></a>
+                    </div>
+                </form>
+					<div class="container d-flex align-items-center justify-content-center">
+                        <a role="button" href="/register" class="btn btn-outline-light"><button type="submit">Don't have an account? Get one!</button></a>
+                    </div>
             </div>
         </div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     </body>
 </html>
